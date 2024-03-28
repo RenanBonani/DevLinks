@@ -7,10 +7,10 @@ function ToggleMode() {
 
   // substituir a imagem
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./assets/avatar3.jpeg");
-    img.setAttribute("alt", "Foto do Perfil do Linkedin");
+    img.setAttribute("src", "./assets/avatar-light.png");
+    img.setAttribute("alt", "Foto do Perfil com logo DEV");
   } else {
-    img.setAttribute("src", "./assets/avatar2.jpg");
+    img.setAttribute("src", "./assets/avatar.jpg");
     img.setAttribute("alt", "Foto do Perfil do GitHub");
   }
 }

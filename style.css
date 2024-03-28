@@ -31,6 +31,7 @@ body * {
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 .container {
@@ -79,17 +80,19 @@ body {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  left: 0;
   position: absolute;
   top: 50%;
   z-index: 1;
-
   transform: translateY(-50%);
+  animation: slide-back 0.4s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 0.5rem solid var(--highlight-color);
 }
 
 /* links */
@@ -161,3 +164,20 @@ footer {
 }
 
 /* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
+  }
+}
